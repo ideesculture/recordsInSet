@@ -116,6 +116,7 @@
 				$vs_sql = "
 					SELECT
 						t.{$t_table->primaryKey()},
+						t.idno,
 						lt.{$t_table->getLabelDisplayField()},
 						lt.locale_id
 					FROM
@@ -136,6 +137,7 @@
 					if (!($vs_label = $qr_records->get($t_table->getLabelTableName().".".$t_table->getLabelDisplayField()))) { $vs_label = '???'; }
 					$va_item_list[$qr_records->get($t_table->primaryKey())] = array(
 						"display" => $vs_label,
+						"idno"=>$qr_records->get("idno"),
 						"locale_id" => $qr_records->get($t_table->getLabelTableName().".locale_id"),
 					);
 				}
