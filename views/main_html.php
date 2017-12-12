@@ -38,7 +38,7 @@
 ?>
 
 <div class="dashboardWidgetContentContainer">
-	<div class="dashboardWidgetHeading"><small>Ensemble</small> <b><?php print $set_label."</b> (".sizeof($va_item_list)." archives)"; ?></div>
+	<div class="dashboardWidgetHeading"><small>Ensemble</small> <b><a href="http://sacem.ideesculture.fr/gestion/index.php/manage/sets/SetEditor/Edit/Screen17/set_id/<?php print $set_to_display; ?>"><?php print $set_label."</a></b> (".sizeof($va_item_list)." archives)"; ?></div>
 	<div class="dashboardWidgetScrollMedium"><ul>
 <?php
 	foreach($va_item_list as $vn_id => $va_record) {
